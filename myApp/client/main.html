@@ -3,23 +3,42 @@
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
 
   {{> hello}}
-  {{> info}}
+
 </body>
 
+ <template name="task">
+   <li class="{{#if checked}}checked{{/if}}">
+     <button class="delete">&times;</button>
+
+      <input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+
+      <span class="text">{{text}}</span>
+      <span class="text"><strong>{{username}}</strong> - {{text}}</span>
+    </li>
+  </template>
+
+
 <template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
+<div class="container">
+     <header>
+
+        {{> loginButtons}}
+
+        <!--when logged in show the following-->
+        {{#if currentUser}}
+                <h1> I'm logged in</h1>
+        {{/if}}
+      </header>
+
+      <ul>
+       {{#each tasks}}
+         {{> task}}
+       {{/each}}
+     </ul>
+</div>
 </template>
 
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
-</template>
+                                                                                                                                                                        
+
