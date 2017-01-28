@@ -5,7 +5,18 @@
     "start": "meteor run"
   },
   "dependencies": {
+    "babel-runtime": "6.18.0",
+    "classnames": "^2.2.5",
+    "history": "^4.5.1",
     "meteor-node-stubs": "~0.2.0",
-    "babel-runtime": "6.18.0"
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-router": "^3.0.2",
+    "express": "^4.10.2"
+  },
+  "devDependencies": {
+    "meteor-node-stubs": "^0.2.5",
+    "socket.io": "^1.7.2",
+    "socket.io-client": "^1.7.2"
   }
 }
