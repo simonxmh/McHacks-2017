@@ -13,7 +13,7 @@ const routes = [
     path: '/about',
     component: About
   }, {
-    path: '*',
+    path: '/NotFound',
     component: NotFound
   }, {
     path: '/StudentChat',

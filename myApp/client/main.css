@@ -123,3 +123,12 @@ header .hide-completed {
     padding-bottom: 5px;
   }
 }
+
+html {
+  padding: 10px;
+  font-family: Verdana, sans-serif;
+}
+
+.login-buttons-dropdown-align-right {
+  float: right;
+}
